@@ -1,0 +1,325 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased !important;
+  background: #dadbd3;
+}
+
+header.main {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 127px;
+  background: #009688;
+}
+
+/* LOGIN PAGE */
+
+div.login {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.login div.login-card {
+  background: #fff;
+  width: 400px;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+div.login div.login-card form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+div.login div.login-card form label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+div.login div.login-card form input {
+  height: 35px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ddd;
+}
+
+div.login div.login-card form button {
+  background: #09d261;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+div.login div.login-card form button:hover {
+  background: #08b854;
+}
+
+/* DASHBOARD PAGE */
+
+div.dashboard {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding: 20px 0;
+}
+
+div.dashboard div.dashboard-card {
+  position: relative;
+  background: #fff;
+  height: 100%;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+}
+
+/* CONTACTS LIST */
+
+div.contacts-list {
+  padding-top: 65px;
+  width: 420px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+header.contacts-list {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  background: #eee;
+  height: 65px;
+  width: 420px;
+  border-right: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+header.contacts-list div.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #09d261;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: bold;
+  margin-right: 15px;
+  font-size: 13px;
+  margin-left: 20px;
+}
+
+div.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+	padding: 20px;
+}
+
+div.contact:hover {
+  background: #f4f5f5;
+  cursor: pointer;
+  transform: scale(1.005);
+}
+
+div.contacts-list div.active {
+  background: #e9ebeb;
+}
+
+div.user-informations {
+  display: flex;
+  align-items: center;
+}
+
+div.user-informations span.name {
+  font-size: 17px;
+}
+
+p.last-message {
+  white-space: nowrap;
+  width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  margin-top: 3px;
+}
+
+div.user-informations div.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #09d261;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+span.last-seen {
+  color: #b5b5b5;
+  font-size: 12px;
+}
+
+div.conversation {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+}
+
+header.conversation {
+  display: flex;
+  align-items: center;
+  background: #eee;
+  height: 65px;
+  border-bottom: 1px solid #d0d7ca;
+}
+
+header.conversation div.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #09d261;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: bold;
+  margin: 0 15px;
+  font-size: 13px;
+}
+
+header.conversation div.user-informations {
+  display: flex;
+  flex-direction: column;
+}
+
+div.user-informations span.status {
+  color: #636363;
+  font-size: 13px;
+  margin-top: 3.5px;
+}
+
+div.user-informations span.name {
+  align-self: flex-start;
+}
+
+div.content {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: #e5ddd5;
+  padding: 30px 70px;
+}
+
+div.card-message {
+  position: relative;
+  max-width: 500px;
+  min-width: 100px;
+  box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13);
+  color: #262626;
+  font-size: 14.2px;
+  line-height: 19px;
+  overflow-wrap: break-word;
+  border-radius: 10px;
+  padding: 6px 60px 8px 9px;
+}
+
+div.card-message + div.card-message {
+  margin-top: 5px;
+}
+
+span.time {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 11px;
+}
+
+div.sender {
+  align-self: flex-end;
+  background: #dcf8c6;
+}
+
+div.receiver {
+  background: #fff;
+  align-self: flex-start;
+}
+
+div.footer {
+  height: 60px;
+  background: #eee;
+  border-left: 1px solid #dcdcdc;
+  padding: 0 40px;
+}
+
+div.footer form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+div.footer input {
+  border: none;
+  border-radius: 20px;
+  width: 100%;
+  height: 65%;
+  padding: 0 15px;
+  font-size: 15px;
+  color: rgb(75, 75, 75);
+}
+
+div.footer input::placeholder {
+  color: rgb(160, 160, 160);
+}
+
+::-webkit-scrollbar {
+  width: 6.5px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(185, 179, 173, 0.7);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(185, 179, 173);
+  transform: scale(2);
+}
+
+div.no-conversation {
+  width: 100%;
+  height: 100%;
+  background: #e5ddd5;
+}
+
+button.dn {
+  display: none;
+}
